@@ -1,5 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:vokka_plus_vpn/Login.dart';
+import 'package:vokka_plus_vpn/splash.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -7,28 +12,28 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
+
 }
 
 class _MyAppState extends State<MyApp> {
   @override
+  void initState() {
+    /*Timer(Duration(seconds: 5), ()=>{
+    Navigator.push(context, MaterialPageRoute(builder: (context){
+        return Login();
+      }))
+      }
+    );*/
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body:Center(
-          child: Column(
-            children: [
-              Image.asset('assets/images/logo1.png'),
-              Text("Powered by",
-                style: TextStyle(
-                    color: HexColor("#002AA8"),
-                    fontSize: 20
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      home: Splash()
     );
   }
+
+
 }
 
