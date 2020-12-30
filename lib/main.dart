@@ -16,16 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    /*Timer(Duration(seconds: 5), ()=>{
-    Navigator.push(context, MaterialPageRoute(builder: (context){
-        return Login();
-      }))
-      }
-    );*/
-    super.initState();
-  }
+
 
   @override
   Widget build(BuildContext context) {
